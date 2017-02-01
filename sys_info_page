@@ -13,14 +13,12 @@ report_uptime () {
 		_EOF_
 }
 
-
 report_disk_space () {
 	cat <<- _EOF_
 		<H2>Disk Space Utilization</H2>
 		<PRE>$(df -h)</PRE>
 		_EOF_
 }
-
 
 report_home_space () {
 	if [[ $(id -u) -eq 0 ]]; then
@@ -36,7 +34,6 @@ report_home_space () {
 	fi
 	return
 }
-
 
 usage() {
 	echo "$PROGNAME: usage: $PROGNAME [-f file | -i]"
@@ -59,8 +56,6 @@ write_html_page() {
 	</HTML>
 	_EOF_
 }
-
-
 
 # process command line options
 
